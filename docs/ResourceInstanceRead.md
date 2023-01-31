@@ -1,0 +1,21 @@
+
+# ResourceInstanceRead
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **kotlin.String** | A unique identifier by which Permit will identify the resource instance for permission checks. You will later pass this identifier to the &#x60;permit.check()&#x60; API. A key can be anything: for example the resource db id, a url slug, a UUID or anything else as long as it&#39;s unique on your end. The resource instance key must be url-friendly. | 
+**resource** | **kotlin.String** | the *key* of the resource (type) of this resource instance. For example: if this resource instance is the annual budget document, the key of the resource might be &#x60;document&#x60;. | 
+**id** | [**java.util.UUID**](java.util.UUID.md) | Unique id of the resource instance | 
+**organizationId** | [**java.util.UUID**](java.util.UUID.md) | Unique id of the organization that the resource instance belongs to. | 
+**projectId** | [**java.util.UUID**](java.util.UUID.md) | Unique id of the project that the resource instance belongs to. | 
+**environmentId** | [**java.util.UUID**](java.util.UUID.md) | Unique id of the environment that the resource instance belongs to. | 
+**createdAt** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) | Date and time when the resource instance was created (ISO_8601 format). | 
+**updatedAt** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) | Date and time when the resource instance was last updated/modified (ISO_8601 format). | 
+**resourceId** | [**java.util.UUID**](java.util.UUID.md) | the id of the resource (type) of this resource instance. | 
+**tenant** | **kotlin.String** | the *key* of the tenant that this resource belongs to, used to enforce tenant boundaries in multi-tenant apps. |  [optional]
+**tenantId** | [**java.util.UUID**](java.util.UUID.md) | the id of the tenant of this resource instance. |  [optional]
+**attributes** | [**kotlin.Any**](.md) | Arbitraty resource attributes that will be used to enforce attribute-based access control policies. |  [optional]
+
+
+
